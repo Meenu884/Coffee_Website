@@ -1,0 +1,46 @@
+:root {
+        --coffee-dark: #3e2723;   
+        --coffee-medium: #6f4e37;
+        --coffee-light: #c4a484;
+        --coffee-accent: #d2b48c;
+        --coffee-cream: #f5f5dc;
+        --coffee-gold: #d4af37;
+        --text-dark: #2c2416;
+        --text-light: #f3f3f3;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background: var(--coffee-accent);
+        color: var(--text-dark);
+       
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .container h2{
+        font-size: larger;
+        font-weight: bolder;
+    }
+
+    .frames {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding: 200px;
+    }
+
+    
+    

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Website</title>
+    
+    <!---link to font awesome for inserting icons--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--lets link google font for inserting font family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <!---link to css file--->
+    <link rel="stylesheet" href="cof.css">
+    
+</head>
+<body>
+
+    <!----Header--->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <!--now insert coffee cup icons here-->
+                <i class="fa-solid fa-mug-hot logo-icon"></i>
+                <div class="logo-text">Bean<span> Street</span></div>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li><li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-button">
+                <a href="form.html" class="btn btn-secondary">Sign in</a>
+                <a href="#" class="btn btn-primary">Order Online</a>
+            </div>
+        </div>
+    </header>
+
+    <!--Hero Section-->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-subtitle">
+                    <i class="fa-solid fa-seedling"></i>
+                    Ethically Sourced Beans
+                </div>
+                <h1 class="hero-title">Freshly Brewed Happiness,<br><span> 
+                    Every Day</span></h1>
+                <p class="hero-text">Discover handcrafted coffee made from premium beans, brewed to perfection. 
+                    Step into Bean Street and experience comfort, flavor, and community in every sip.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Explore the taste!</a>
+                    <a href="#" class="btn btn-secondary">Visit Bean Street!</a>
+                </div>
+            </div>
+            <img src="coffee.jpg" alt="coffee" width="1000px"> 
+        </div>
+    </section>
+
+    <!--location-->
+    <section class="locations" style="background: var(--coffee-dark);">
+        <div class="container">
+            <img src="poster.png" alt="Shop_Poster" width="50%">
+            <aside><p>BeanStreet brings people together through thoughtfully designed café spaces across cities, each offering a unique vibe while staying true to our signature quality. From cozy corners to modern work-friendly lounges, every branch blends local culture with premium coffee experiences. Wherever you go, you’ll find the same warmth, rich flavors, and inviting atmosphere—making every cup feel like home.</p></aside>
+        </div>
+
+        <!-- <div class="container">
+            <iframe 
+                src="https://www.google.com/maps?q=13.0827,80.2707&output=embed" 
+                width="50%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div> -->
+    </section>
+
+    <!---Products Section--->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Our Selection</div>
+                <h2 class="section-title">Signature Coffee Blends</h2>
+                <p class="section-desc">Each batch is carefully roasted to highlight 
+                    the unique characteristics of the beans.
+                </p>
+                <button><a href="#brewbeans">Brewbeans</a></button>
+                <button><a href="#coffee">Coffee</a></button>
+                <button><a href="#highlight">Highlights</a></button>
+                <button><a href="#branches">Branches</a></button>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="coffee 1.jpg" alt="Ethiopian Yirgacheffe">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-tag">BESTSELLER</div>
+                        <h3 class="product-title">Ethiopian Yirgacheffe</h3>
+                        <p class="product-desc">Floral notes with bright citrus acidity 
+                            and a tea-like body. Light roast.</p>
+
+                        <div class="product-footer">
+                            <div class="product-price">$18.99</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="cof 2.jpg" alt="Colombian Supremo" width="300px">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Colombian Supremo</h3>
+                        <p class="product-desc">Rich caramel sweetness with nutty undertones 
+                            and balanced acidity. Medium roast.
+                        </p>
+                        <div class="product-footer"> 
+                            <div class="product-price">$20.99</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>                                    
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+
+                            <!--add to cart-->
+                            <button onclick="addToCart('Colombian Supremo', 20.99)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="cof 3.jpg" alt="Midnight Mocha">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Midnight Mocha</h3>
+                        <p class="product-desc">Dark chocolate meets freshly                                 
+                            brewed espresso for a rich, indulgent coffee with a smooth 
+                            and satisfying sweetness.</p>
+                        <div class="product-footer">
+                            <div class="product-price">$16.99</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+
+                            <!--addtocart-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="cafe 1.jpg" alt="Dailylife Mocha">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Dailylife Mocha</h3>
+                        <p class="product-desc">Fine chocolate meets freshly                                 
+                            brewed espresso for a rich, indulgent coffee with a smooth 
+                            and satisfying sweetness. It will look like sunlight coffee.</p>
+                        <div class="product-footer">
+                            <div class="product-price">$16.99</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="cof 4.jpg" alt="  Whiterose coffee">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-tag">NEW</div>
+                        <h3 class="product-title">Whiterose Coffee</h3>
+                        <p class="product-desc">Vanilla chocolate meets freshly                                 
+                            brewed espresso for a rich, indulgent coffee with a smooth 
+                            and satisfying sweetness with rose petals aroma.</p>
+                        <div class="product-footer">
+                            <div class="product-price">$85.90</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="cof 5.jpg" alt="Dark Roast Espresso">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-tag">NEW</div>
+                        <h3 class="product-title">Dark Roast Espresso</h3>
+                        <p class="product-desc">Bold and intense with dark 
+                            chocolate notes and a creamy mouthfeell. Dark roast.</p>
+                        <div class="product-footer">
+                            <div class="product-price">$20.99</div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+      <!--Footer-->
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="about.html"><h3>About BeanStreet</h3></a>
+                    <p style="color: var(--coffee-accent); margin-bottom: 20px;">
+                       Born from a love for rich aromas and bold flavors, coffee beans and modern brewing.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Consistent Quality</a></li>
+                        <li><a href="#">Freshly Roasted</a></li>
+                        <li><a href="#">Comfortable Ambiance</a></li>
+                        <li><a href="#">Friendly Skilled</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot"></i> 190 half road, fladship store, chennai</li>
+                        <li><i class="fa-solid fa-phone"></i> (999) 965-3429</li>
+                        <li><i class="fa-solid fa-envelope"></i> bean@street.com</li>
+                        <li><i class="fa-solid fa-clock"></i> Mon-Sat: 6.30 am - 9pm </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2026 BeadStreet Coffee Roasters. All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <!--link to javascript file-->
+    <script src="cof.js"></script>
+
+</body>
+</html>
