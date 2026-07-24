@@ -28,22 +28,23 @@
 
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li><li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#locations">Locations</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="nav-button">
-                <a href="form.html" class="btn btn-secondary">Sign in</a>
-                <a href="#" class="btn btn-primary">Order Online</a>
+                <a href="contact.html" class="btn btn-secondary">Contact</a>
+                <a href="#cart-summary" class="btn btn-primary">Add <span id="cart-count">[0]</span></a>
             </div>
         </div>
     </header>
 
     <!--Hero Section-->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-subtitle">
@@ -56,7 +57,7 @@
                     Step into Bean Street and experience comfort, flavor, and community in every sip.</p>
                 <div class="hero-buttons">
                     <a href="#products" class="btn btn-primary">Explore the taste!</a>
-                    <a href="#" class="btn btn-secondary">Visit Bean Street!</a>
+                    <a href="contact.html" class="btn btn-secondary">Visit Bean Street!</a>
                 </div>
             </div>
             <img src="coffee.jpg" alt="coffee" width="1000px"> 
@@ -64,22 +65,23 @@
     </section>
 
     <!--location-->
-    <section class="locations" style="background: var(--coffee-dark);">
-        <div class="container">
-            <img src="poster.png" alt="Shop_Poster" width="50%">
-            <aside><p>BeanStreet brings people together through thoughtfully designed café spaces across cities, each offering a unique vibe while staying true to our signature quality. From cozy corners to modern work-friendly lounges, every branch blends local culture with premium coffee experiences. Wherever you go, you’ll find the same warmth, rich flavors, and inviting atmosphere—making every cup feel like home.</p></aside>
-        </div>
+    <section class="locations" id="locations" style="background: var(--coffee-dark);">
+        <div class="container location-layout">
+            <div class="location-poster">
+                <img src="poster.png" alt="Shop_Poster" width="90%">
+            </div>
 
-        <!-- <div class="container">
-            <iframe 
-                src="https://www.google.com/maps?q=13.0827,80.2707&output=embed" 
-                width="50%" 
-                height="300" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </div> -->
+            <div class="location-info">
+                <div class="section-subtitle">Visit Our Store</div>
+                <h2 class="section-title">Find BeanStreet near you</h2>
+                <p class="section-desc">Stop by our flagship café for handcrafted brews, cozy seating, and a warm coffeehouse experience in the heart of Chennai.</p>
+                <ul class="location-list">
+                    <li><i class="fa-solid fa-location-dot"></i> 190 Half Road, Flagship Store, Chennai</li>
+                    <li><i class="fa-solid fa-phone"></i> (999) 965-3429</li>
+                    <li><i class="fa-solid fa-envelope"></i> bean@street.com</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <!---Products Section--->
@@ -110,14 +112,20 @@
 
                         <div class="product-footer">
                             <div class="product-price">$18.99</div>
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
+                            <div class="product-actions">
+                                <button class="like-btn" data-product="Ethiopian Yirgacheffe" aria-label="Like Ethiopian Yirgacheffe">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <div class="rating" data-product="Ethiopian Yirgacheffe">
+                                    <i class="fa-solid fa-star" data-rate="1"></i>
+                                    <i class="fa-solid fa-star" data-rate="2"></i>
+                                    <i class="fa-solid fa-star" data-rate="3"></i>
+                                    <i class="fa-solid fa-star" data-rate="4"></i>
+                                    <i class="fa-solid fa-star-half-stroke" data-rate="5"></i>
+                                </div>
                             </div>
                         </div>
+                        <button class="add-cart-btn btn btn-secondary" data-name="Ethiopian Yirgacheffe" data-price="18.99">Add to Cart</button>
                     </div>
                 </div>
 
@@ -133,19 +141,20 @@
                         </p>
                         <div class="product-footer"> 
                             <div class="product-price">$20.99</div>
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>                                    
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="far fa-star"></i>
+                            <div class="product-actions">
+                                <button class="like-btn" data-product="Colombian Supremo" aria-label="Like Colombian Supremo">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <div class="rating" data-product="Colombian Supremo">
+                                    <i class="fa-solid fa-star" data-rate="1"></i>
+                                    <i class="fa-solid fa-star" data-rate="2"></i>
+                                    <i class="fa-solid fa-star" data-rate="3"></i>
+                                    <i class="fa-solid fa-star" data-rate="4"></i>
+                                    <i class="far fa-star" data-rate="5"></i>
+                                </div>
                             </div>
-
-                            <!--add to cart-->
-                            <button onclick="addToCart('Colombian Supremo', 20.99)">
-                                Add to Cart
-                            </button>
                         </div>
+                        <button class="add-cart-btn btn btn-secondary" data-name="Colombian Supremo" data-price="20.99">Add to Cart</button>
                     </div>
                 </div>
             
@@ -160,16 +169,20 @@
                             and satisfying sweetness.</p>
                         <div class="product-footer">
                             <div class="product-price">$16.99</div>
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="far fa-star"></i>
+                            <div class="product-actions">
+                                <button class="like-btn" data-product="Midnight Mocha" aria-label="Like Midnight Mocha">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <div class="rating" data-product="Midnight Mocha">
+                                    <i class="fa-solid fa-star" data-rate="1"></i>
+                                    <i class="fa-solid fa-star" data-rate="2"></i>
+                                    <i class="fa-solid fa-star" data-rate="3"></i>
+                                    <i class="fa-solid fa-star" data-rate="4"></i>
+                                    <i class="far fa-star" data-rate="5"></i>
+                                </div>
                             </div>
-
-                            <!--addtocart-->
                         </div>
+                        <button class="add-cart-btn btn btn-secondary" data-name="Midnight Mocha" data-price="16.99">Add to Cart</button>
                     </div>
                 </div>
 
@@ -184,14 +197,20 @@
                             and satisfying sweetness. It will look like sunlight coffee.</p>
                         <div class="product-footer">
                             <div class="product-price">$16.99</div>
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="far fa-star"></i>
+                            <div class="product-actions">
+                                <button class="like-btn" data-product="Dailylife Mocha" aria-label="Like Dailylife Mocha">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <div class="rating" data-product="Dailylife Mocha">
+                                    <i class="fa-solid fa-star" data-rate="1"></i>
+                                    <i class="fa-solid fa-star" data-rate="2"></i>
+                                    <i class="fa-solid fa-star" data-rate="3"></i>
+                                    <i class="fa-solid fa-star" data-rate="4"></i>
+                                    <i class="far fa-star" data-rate="5"></i>
+                                </div>
                             </div>
                         </div>
+                        <button class="add-cart-btn btn btn-secondary" data-name="Dailylife Mocha" data-price="16.99">Add to Cart</button>
                     </div>
                 </div>
 
@@ -207,14 +226,20 @@
                             and satisfying sweetness with rose petals aroma.</p>
                         <div class="product-footer">
                             <div class="product-price">$85.90</div>
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="far fa-star"></i>
+                            <div class="product-actions">
+                                <button class="like-btn" data-product="Whiterose Coffee" aria-label="Like Whiterose Coffee">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <div class="rating" data-product="Whiterose Coffee">
+                                    <i class="fa-solid fa-star" data-rate="1"></i>
+                                    <i class="fa-solid fa-star" data-rate="2"></i>
+                                    <i class="fa-solid fa-star" data-rate="3"></i>
+                                    <i class="fa-solid fa-star" data-rate="4"></i>
+                                    <i class="far fa-star" data-rate="5"></i>
+                                </div>
                             </div>
                         </div>
+                        <button class="add-cart-btn btn btn-secondary" data-name="Whiterose Coffee" data-price="85.90">Add to Cart</button>
                     </div>
                 </div>
             
@@ -229,17 +254,36 @@
                             chocolate notes and a creamy mouthfeell. Dark roast.</p>
                         <div class="product-footer">
                             <div class="product-price">$20.99</div>
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                            <div class="product-actions">
+                                <button class="like-btn" data-product="Dark Roast Espresso" aria-label="Like Dark Roast Espresso">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <div class="rating" data-product="Dark Roast Espresso">
+                                    <i class="fa-solid fa-star" data-rate="1"></i>
+                                    <i class="fa-solid fa-star" data-rate="2"></i>
+                                    <i class="fa-solid fa-star" data-rate="3"></i>
+                                    <i class="fa-solid fa-star" data-rate="4"></i>
+                                    <i class="fa-solid fa-star" data-rate="5"></i>
+                                </div>
                             </div>
                         </div>
+                        <button class="add-cart-btn btn btn-secondary" data-name="Dark Roast Espresso" data-price="20.99">Add to Cart</button>
                     </div>
                 </div>
                 
+            </div>
+        </div>
+    </section>
+
+    <section class="cart-summary" id="cart-summary">
+        <div class="container cart-summary-wrap">
+            <div>
+                <div class="section-subtitle">Your Basket</div>
+                <h2 class="section-title">Cart & favorites</h2>
+            </div>
+            <div class="cart-summary-box">
+                <div id="cart-items">No items added yet.</div>
+                <div class="cart-total">Total: <span id="cart-total">$0.00</span></div>
             </div>
         </div>
     </section>
@@ -274,10 +318,10 @@
                 <div class="footer-column">
                     <h3>Contact Us</h3>
                     <ul class="footer-links">
-                        <li><i class="fa-solid fa-location-dot"></i> 190 half road, fladship store, chennai</li>
+                        <li><i class="fa-solid fa-location-dot"></i> 190 Half Road, Flagship Store, Chennai</li>
                         <li><i class="fa-solid fa-phone"></i> (999) 965-3429</li>
                         <li><i class="fa-solid fa-envelope"></i> bean@street.com</li>
-                        <li><i class="fa-solid fa-clock"></i> Mon-Sat: 6.30 am - 9pm </li>
+                        <li><i class="fa-solid fa-clock"></i> Mon-Sat: 6:30 am - 9:00 pm</li>
                     </ul>
                 </div>
             </div>

@@ -113,7 +113,7 @@
         color: white;
     }
     .btn-primary:hover{
-        background: var(--coffee);
+        background: #4f3528;
         transform: translateY(-3px);
     }
     .btn-secondary {
@@ -230,6 +230,134 @@
         color: var(--text-light);
     }
 
+    .about-page {
+        background:
+            radial-gradient(circle at top, rgba(212,175,55,0.18), transparent 30%),
+            linear-gradient(180deg, #f5efe8 0%, #f1e0c7 100%);
+        color: var(--text-dark);
+    }
+
+    .about-page .logo-text,
+    .about-page .section-title,
+    .about-page .stat-card h3,
+    .about-page .about-card h3 {
+        font-family: 'Playfair Display', serif;
+    }
+
+    .about-page .section-title {
+        color: var(--coffee-dark);
+        font-size: clamp(2.2rem, 4vw, 3.8rem);
+        line-height: 1.1;
+        text-shadow: 0 2px 8px rgba(62, 39, 35, 0.12);
+    }
+
+    .about-page .section-subtitle {
+        color: var(--coffee-medium);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .about-page .section-desc {
+        color: #4b382c;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .about-hero {
+        padding: 130px 0 80px;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin: 40px 0;
+    }
+
+    .stat-card,
+    .about-card {
+        background: linear-gradient(180deg, rgba(62, 39, 35, 0.97), rgba(72, 47, 35, 0.95));
+        color: var(--text-light);
+        padding: 24px;
+        border-radius: 18px;
+        box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+        border: 1px solid rgba(212,175,55,0.2);
+    }
+
+    .stat-card h3 {
+        font-size: 32px;
+        color: var(--coffee-gold);
+        margin-bottom: 10px;
+    }
+
+    .stat-card p,
+    .about-card p {
+        color: #f4e8d8;
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+    }
+
+    .about-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 48px rgba(0,0,0,0.2);
+    }
+
+    .about-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        border: 2px solid rgba(212,175,55,0.35);
+    }
+
+    .about-card h3 {
+        margin-bottom: 12px;
+        font-size: 1.7rem;
+        color: var(--coffee-gold);
+    }
+
+    .location-layout,
+    .contact-map-layout {
+        display: grid;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .location-layout {
+        grid-template-columns: 1fr 1fr;
+        padding: 40px 0 20px;
+    }
+
+    .location-info {
+        color: var(--text-light);
+    }
+
+    .location-list {
+        list-style: none;
+        margin-top: 20px;
+        display: grid;
+        gap: 12px;
+    }
+
+    .location-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact map-layout {
+        padding: 20px 0 60px;
+    }
+
     button{
         position: relative;
         background: #3e2723;
@@ -309,6 +437,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
     }
     .product-price{
         font-size: 24px;
@@ -316,9 +446,84 @@
         color: var(--coffee-gold);
     }
 
+    .product-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .like-btn {
+        background: transparent;
+        color: #fff;
+        border: 1px solid var(--coffee-gold);
+        padding: 6px 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    .like-btn.liked {
+        color: #ff5a5a;
+        border-color: #ff5a5a;
+    }
+
     .rating{
         color: var(--coffee-gold);
         font-size: 16px;
+        display: flex;
+        gap: 2px;
+        cursor: pointer;
+    }
+
+    .rating .fa-star,
+    .rating .fa-star-half-stroke,
+    .rating .far.fa-star {
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .rating .active {
+        color: #ffd166;
+        transform: scale(1.1);
+    }
+
+    .add-cart-btn {
+        width: 100%;
+        margin: 0;
+    }
+
+    .cart-summary {
+        background: #201a17;
+        padding: 60px 0;
+    }
+
+    .cart-summary-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .cart-summary-box {
+        background: #2f241f;
+        color: #fff;
+        padding: 20px;
+        border-radius: 16px;
+        width: min(100%, 500px);
+    }
+
+    .cart-total {
+        margin-top: 12px;
+        font-weight: 700;
+        color: var(--coffee-gold);
+    }
+
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     h1, h1, h4, h4 {
@@ -328,6 +533,79 @@
     }
 
     /* Footer */
+    .contact-page {
+        background: linear-gradient(180deg, #2f2018, #f3e6d3);
+    }
+
+    .contact-hero {
+        padding: 120px 0 80px;
+    }
+
+    .contact-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        align-items: start;
+    }
+
+    .contact-side {
+        display: grid;
+        gap: 20px;
+    }
+
+    .contact-card,
+    .contact-info,
+    .contact-map {
+        background: rgba(255,255,255,0.92);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .contact-map iframe {
+        width: 100%;
+        min-height: 300px;
+        border: 0;
+        border-radius: 18px;
+    }
+
+    .contact-form {
+        display: grid;
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .contact-form label {
+        display: grid;
+        gap: 8px;
+        font-weight: 600;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: 1px solid #c6a98d;
+        font: inherit;
+    }
+
+    .contact-info h3 {
+        margin-bottom: 18px;
+    }
+
+    .contact-info ul {
+        list-style: none;
+        display: grid;
+        gap: 14px;
+    }
+
     footer {
         background: var(--coffee-dark);
         color: var(--text-light);
